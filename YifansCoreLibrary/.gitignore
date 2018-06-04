@@ -1,0 +1,10 @@
+.gradle
+/build/
+!gradle/wrapper/gradle-wrapper.jar
+
+### Eclipse ###
+/bin/
+.settings/
+.factorypath
+.classpath
+.project

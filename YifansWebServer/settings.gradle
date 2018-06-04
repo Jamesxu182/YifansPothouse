@@ -1,0 +1,3 @@
+rootProject.name = 'YifansWebServer'
+include "YifansCoreLibrary"
+project(":YifansCoreLibrary").projectDir = new File("../YifansCoreLibrary");
