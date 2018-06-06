@@ -1,0 +1,33 @@
+def List buildFileList = [
+	'../YifansAuthServer/build.gradle', 
+	'../YifansCoreLibrary/build.gradle', 
+	'../YifansEurekaServer/build.gradle', 
+	'../YifansResourceServer/build.gradle', 
+	'../YifansWebServer/build.gradle', 
+	'../YifansZuulServer/build.gradle'
+]
+
+def createBuildTask(name, buildFile) {
+    task "$name"(type: GradleBuild) {
+        buildFile = buildFile
+        tasks = ['build']
+    }
+}
+
+task buildAll << {
+    buildFileList.each() {
+        def tempTask = tasks.create(name: "execute_$it", type: GradleBuild)
+        tempTask.buildFile="$it"
+        tempTask.tasks = ['build']
+        tempTask.execute()
+    }
+}
+
+task cleanAll << {
+    buildFileList.each() {
+        def tempTask = tasks.create(name: "execute_$it", type: GradleBuild)
+        tempTask.buildFile="$it"
+        tempTask.tasks = ['clean']
+        tempTask.execute()
+    }
+}
