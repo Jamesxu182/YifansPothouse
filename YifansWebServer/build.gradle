@@ -46,7 +46,6 @@ dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.cloud:spring-cloud-starter-security')
 	compile('org.springframework:spring-jms')
-	compile('org.springframework.cloud:spring-cloud-starter-netflix-eureka-client')
 	compile('javax.servlet:jstl')
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
