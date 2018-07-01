@@ -45,8 +45,8 @@ ext {
 dependencies {
 	compile('org.springframework.boot:spring-boot-starter-web')
 	compile('org.springframework.cloud:spring-cloud-starter-security')
-	compile('org.springframework:spring-jms')
-	compile('javax.servlet:jstl')
+	compile('org.springframework.cloud:spring-cloud-starter-stream-rabbit')
+	providedRuntime('javax.servlet:jstl')
 	providedRuntime('org.springframework.boot:spring-boot-starter-tomcat')
 	testCompile('org.springframework.boot:spring-boot-starter-test')
 	
